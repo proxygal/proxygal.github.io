@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>Proxy / VPN Testen</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" media="all" href="style.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<style media="screen">
+body {font-family:sans-serif;transition:all 1s ease-in-out;-webkit-transition:all 1s ease-in-out}
+h1,h2,h3,h4,h5,h6,p{font-family:sans-serif}
+#prodoverlay {text-align:center;min-height:650px;position:relative;top:40%}
+#content {min-height:900px;background:#E7E7EF;background-size:cover;background-repeat:no-repeat}
+.textbox{background:rgba(255,255,255,0.6);margin-top:30px;padding:60px 230px;transition:all 0.5s ease-in-out;-webkit-transition:all 0.5s ease-in-out}
+.textbox:hover{background:rgba(255,255,255,0.1)}
+.textbox:hover .tag{background:#9292A3!important}
+.textbox:hover pre{background-color: #DDDDE7!important}
+ a {color:#6A6A88!important}a:hover{text-decoration:none}
+</style>
+    </head>
+    <body>
+     <div id="content">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 textbox">
+            <h2 class="main">Getestet</h2>
+            <p>Fsockopen / Ausgänge 80,8080,8000,3128,5000,5353,123 und 443 (SSH)</p>
+
+            <pre>
+foreach($ports as $port){
+    if(@fsockopen($_SERVER['REMOTE_ADDR'], $port, $errstr, $errno, 1))
+      echo "Proxy auf " . $port;
+    else echo $port . " Kein Proxy";
+  }
+            </pre>
+
+            <p>HTTP Headers</p>
+
+            <pre>
+  $headers = array(
+    'HTTP_VIA',
+    'HTTP_X_FORWARDED_FOR',
+    'HTTP_FORWARDED_FOR',
+    'HTTP_X_FORWARDED',
+    'HTTP_FORWARDED',
+    'HTTP_CLIENT_IP',
+    'HTTP_FORWARDED_FOR_IP',
+    'VIA',
+    'X_FORWARDED_FOR',
+    'FORWARDED_FOR',
+    'X_FORWARDED',
+    'FORWARDED',
+    'CLIENT_IP',
+    'FORWARDED_FOR_IP',
+    'HTTP_PROXY_CONNECTION',
+    'HTTP_X_REAL_IP',
+    'HTTP_X_PROXY_ID',
+    );
+            </pre>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 textbox">
+            <h3 style="text-align:center">Testergebnisse / Proxydienste</h3>
+            <div class="col-md-12">
+              <span class="tag"> • Kostenfreie Proxy's</span>
+              <p>Entferne Scripts, Objekte und so.</p>
+              <p><a href="http://hidester.com/de/proxy">Hidester</a> / Proxy 80, kein Header</p>
+              <p><a href="https://hide.me/de/proxy">Hide.me</a> / Proxy 80, kein header</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 textbox">
+            <h3 style="text-align:center">Ergebnisse / VPN-Anbieter</h3>
+            <div class="col-md-12">
+              <span class="tag"> • Kostenpflichtige VPN's</span>
+              <p><a href="http://www.cyberghostvpn.com/de_de">CyberGhost</a> / Proxy 443, kein Header</p>
+
+              <span class="tag"> • Kostenfreie VPN's</span>
+              <p><a href="https://www.securitykiss.com/">SecKiss</a> / Proxy 123, kein Header</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+&nbsp;
+&nbsp;
+&nbsp;
+
+    </body>
+</html>
