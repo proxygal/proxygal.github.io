@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Proxy / VPN Testen</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" media="all" href="css.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<style media="screen">
+body {font-family:sans-serif;transition:all 1s ease-in-out;-webkit-transition:all 1s ease-in-out}
+h1,h2,h3,h4,h5,h6,p{font-family:sans-serif}
+#prodoverlay {text-align:center;min-height:650px;position:relative;top:40%}
+#content {min-height:900px;background:#E7E7EF;background-size:cover;background-repeat:no-repeat}
+.textbox{background:rgba(255,255,255,0.6);margin-top:30px;padding:60px 230px;transition:all 0.5s ease-in-out;-webkit-transition:all 0.5s ease-in-out}
+.textbox:hover{background:rgba(255,255,255,0.1)}
+.textbox:hover .tag{background:#9292A3!important}
+.textbox:hover pre{background-color: #DDDDE7!important}
+ a {color:#6A6A88!important}a:hover{text-decoration:none}
+</style>
+    </head>
+    <body>
+     <div id="content">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 textbox">
+            <h2 class="main">EIGENER VPN SERVER</h2>
+<p>
+Ich glaube es ist eher für Geeks und noch ein Problem hat es: Du kriegst keine ausländische IP Adresse. Falls du dies brauchst, versuch eher einen Proxy. Es ist auch kostenfrei und falls du nur so etwas wie Youtube oder so tun willst, reicht es, solange der Proxy verschlüsselt (HTTPS) ist.
+<p/><p>
+Falls du aber eher verbesserte Sicherheit willst, ist das wahrscheinlich was für dich. Wenn du zwei Rechner so einrichtest dass der erste ein Server ist wo die Tunnelierung erfolgt, und der andere ist die Workstation, dann versuch es. Ist ja cool, vor allem falls du gerade unterwegs bist und öffentliche Dienste oder Hotel-WLAN benutzen musst.
+<p/><p>
+Mit VPN, auch wenn der Dienst so lokal ist, bleibt dein Datenverkehr verschlüsselt im Tunnel. Sehr sehr gut, und wenn es kostenfrei ist … man braucht ja die zwei Rechner nie auf einmal zusammen oder?
+<p/><p>
+DIE EINRICHTUNG
+<p/><p>
+Zum Start brauchst du die Tools. Das meistbevorzugte und beliebteste Tool ist anscheinend OpenVPN, ein Open-Source-Projekt. Infos kriegst du da auf der Homepage von OpenVPN. Es gibt noch andere Möglichkeiten – Hamachi zum Beispiel. Hamachi ist ein Freemium-Produkt, die kostenlose Version schafft aber alles was man so braucht. Auch mit kostenfreiem Konto kannst du dein Home-Netzwerk so ausnutzen dass es zum Profinetzwekt wird. Das Tool funktioniert unter Windows, Linux und MacOS also keine Begrenzung, egal welches Betriebssystem du verwendest.
+<p/><p>
+SETUP MIT HAMACHI
+<p/><p>
+Nun brauchst du den Rechner welcher als Server funktionieren wird. Der muss immer ein sein, wenn es aus geht, geht dein Netzwerk auch down.
+<p/><p>
+Lade Hamachi herunter und eröffne es einfach. Falls es das erste Mal ist solltest du so einen Powerbutton sehen. Klicke ihn einfach.
+<p/><p>
+Weiter suche im Menü Punkt <pre>“Network“</pre>. Darunter dann <pre>“Create a new network“</pre>. Das Passwort sollte natürlich so stark wie möglich sein – mache es so wie NGpsg!45hajz und notiere es auf ein Stück Papier.
+<p/><p>
+Jetzt nimm den anderen Rechner. Installiere auch das Himachi, diesmal willst du aber unter Network <pre>“Join existing network”</pre> klicken. Wähle dein neues Netzwerk aus und gib dein Passwort ein. Fertig.
+<p/><p>
+Falls du nur bessere Sicherheit willst ist so etwas ein No-Brainer. In fünf Minuten stellst du es fertig, wirklich so einfach ist das. Dann mit dem VPN kannst du noch Proxy nutzen falls du dann eine andere, vielleicht ausländische IP-Adresse kriegen willst. VPN und Proxy funktionieren gut zusammen, das einzige was du nicht (so einfach) schaffen kannst ist zwei VPN-Tunnel miteinander zu verknüpfen oder VPN in VPN zu nutzen.
+       <p/>    
+           
+          </div>
+        </div>
+      </div>
+
+     
+
+    </body>
+</html>
+
+
